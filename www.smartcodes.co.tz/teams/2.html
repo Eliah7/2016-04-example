@@ -1,0 +1,43 @@
+<div class="contaier">
+   <div class="cance"><i class="fa fa-times" aria-hidden="true"></i></div>
+    <div style="max-width: 1100px; margin: 0 auto;background: rgba(0,0,0,0.8); position: absolute; top: 50%; left:50%; transform: translate(-50%,-50%);">
+      <div class="row">
+        <div class="col-md-6 col-sm-6 r">
+            <div class="pass"><img src="../uploads/web-588faea89ba43.jpg" class="img-responsive"></div>
+        </div>
+        <div class="col-md-6 col-sm-6 lr">
+          <div id="popup-info" style="padding: 7% 0;">
+            <h3>Edwin  Bruno</h3>
+            <h4>Founder &amp; CEO</h4>
+            <p><p>Edwin is our founder and Chief Executive. He is responsible for setting strategy and direction, modelling and setting the company&rsquo;s culture, values, and behaviour, building and leading the senior executive team and allocating capital to the business&rsquo;s priorities.</p>
+</p>
+            <h5>Get in touch: <a href="https://tz.linkedin.com/in/iedwin"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p><a  class="pop prev" href="2.html"><i class="fa fa-long-arrow-left" aria-hidden="true"></i></a></p>
+    <p><a  class="pop next" href="3.html"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></p>
+
+    <script type="text/javascript">
+       $(function(){
+          $('.cance').click(function(){
+              $('#popup').fadeOut('slow');
+        });
+      });
+
+      $('.pop').click(function(e){
+        e.preventDefault(); // Prevents default link action
+        $.ajax({
+          type: 'GET',
+           url: $(this).attr("href"),
+           success: function(result){
+              console.log(result);
+              // console.log('result');
+              $('#popup').html(result).fadeIn('slow');             
+           }
+        });
+      });
+    </script>
+</div>

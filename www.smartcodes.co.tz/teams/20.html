@@ -1,0 +1,43 @@
+<div class="contaier">
+   <div class="cance"><i class="fa fa-times" aria-hidden="true"></i></div>
+    <div style="max-width: 1100px; margin: 0 auto;background: rgba(0,0,0,0.8); position: absolute; top: 50%; left:50%; transform: translate(-50%,-50%);">
+      <div class="row">
+        <div class="col-md-6 col-sm-6 r">
+            <div class="pass"><img src="../uploads/web-58b3356ddc90c.jpg" class="img-responsive"></div>
+        </div>
+        <div class="col-md-6 col-sm-6 lr">
+          <div id="popup-info" style="padding: 7% 0;">
+            <h3>Adam Mbwana</h3>
+            <h4>Copywriter</h4>
+            <p><p>Adam is a wordsmith. He is an active multi-discipline individual who can bring traditional PR principles and digital processes together to create something special for our clients.&nbsp;&nbsp; Adam feeds in-house sites with rich content. He is responsible for all digital PR activities as well as acquiring digital advertising spaces for our customers.</p>
+</p>
+            <h5>Get in touch: <a href=" https://www.linkedin.com/in/adammbwana"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p><a  class="pop prev" href="19.html"><i class="fa fa-long-arrow-left" aria-hidden="true"></i></a></p>
+    <p><a  class="pop next" href="21.html"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></p>
+
+    <script type="text/javascript">
+       $(function(){
+          $('.cance').click(function(){
+              $('#popup').fadeOut('slow');
+        });
+      });
+
+      $('.pop').click(function(e){
+        e.preventDefault(); // Prevents default link action
+        $.ajax({
+          type: 'GET',
+           url: $(this).attr("href"),
+           success: function(result){
+              console.log(result);
+              // console.log('result');
+              $('#popup').html(result).fadeIn('slow');             
+           }
+        });
+      });
+    </script>
+</div>

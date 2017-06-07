@@ -1,0 +1,43 @@
+<div class="contaier">
+   <div class="cance"><i class="fa fa-times" aria-hidden="true"></i></div>
+    <div style="max-width: 1100px; margin: 0 auto;background: rgba(0,0,0,0.8); position: absolute; top: 50%; left:50%; transform: translate(-50%,-50%);">
+      <div class="row">
+        <div class="col-md-6 col-sm-6 r">
+            <div class="pass"><img src="../uploads/web-588faea89e715.jpg" class="img-responsive"></div>
+        </div>
+        <div class="col-md-6 col-sm-6 lr">
+          <div id="popup-info" style="padding: 7% 0;">
+            <h3>Imani Alfayo</h3>
+            <h4>Creative Director</h4>
+            <p><p>Imani is a digital Creative Director and Designer with a passion for creating strong brands and immersive interactive experiences. He is an innovative leader devoted to driving innovations and crafting brand narratives that initiate relevant consumer experiences through digital mediums. At Smart Codes, his responsibilities include new business development, creative team management, and digital strategy.&nbsp;</p>
+</p>
+            <h5>Get in touch: <a href="https://tz.linkedin.com/in/imanialfayo"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p><a  class="pop prev" href="4.html"><i class="fa fa-long-arrow-left" aria-hidden="true"></i></a></p>
+    <p><a  class="pop next" href="6.html"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></p>
+
+    <script type="text/javascript">
+       $(function(){
+          $('.cance').click(function(){
+              $('#popup').fadeOut('slow');
+        });
+      });
+
+      $('.pop').click(function(e){
+        e.preventDefault(); // Prevents default link action
+        $.ajax({
+          type: 'GET',
+           url: $(this).attr("href"),
+           success: function(result){
+              console.log(result);
+              // console.log('result');
+              $('#popup').html(result).fadeIn('slow');             
+           }
+        });
+      });
+    </script>
+</div>
