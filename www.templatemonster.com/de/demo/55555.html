@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Demoversion von der WordPress Vorlage #55555</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<meta property="fb:admins" content="720898483"/>
+<meta property="fb:admins" content="1129631948"/>
+<meta property="fb:admins" content="100001777951090"/>
+<link rel="publisher" href="https://plus.google.com/116173187155256042113"/>
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="https://s.tmimgcdn.com/img/logo-touch/mstile-310x150.png?d=6c4f4f8853"/>
+<meta name="msapplication-TileImage" content="https://s.tmimgcdn.com/img/logo-touch/mstile-310x310.png?d=6c4f4f8853"/>
+<meta name="msapplication-TileImage" content="https://s.tmimgcdn.com/img/logo-touch/mstile-150x150.png?d=6c4f4f8853"/>
+<meta name="msapplication-TileImage" content="https://s.tmimgcdn.com/img/logo-touch/mstile-144x144.png?d=6c4f4f8853"/>
+<meta name="msapplication-TileImage" content="https://s.tmimgcdn.com/img/logo-touch/mstile-70x70.png?d=6c4f4f8853"/>
+<meta name="msapplication-config" content="https://s.tmimgcdn.com/img/logo-touch/browserconfig.xml?d=6c4f4f8853"/>
+<link rel="icon" href="https://s.tmimgcdn.com/img/favicon.ico?d=6c4f4f8853" type="image/x-icon"/>
+<link rel="shortcut icon" href="https://s.tmimgcdn.com/img/favicon.ico?d=6c4f4f8853" type="image/x-icon"/>
+<link rel="icon" type="image/png" href="https://s.tmimgcdn.com/img/logo-touch/favicon-16x16.png?d=6c4f4f8853" sizes="16x16">
+<link rel="icon" type="image/png" href="https://s.tmimgcdn.com/img/logo-touch/favicon-32x32.png?d=6c4f4f8853" sizes="32x32">
+<link rel="icon" type="image/png" href="https://s.tmimgcdn.com/img/logo-touch/favicon-96x96.png?d=6c4f4f8853" sizes="96x96">
+<link rel="icon" type="image/png" sizes="36x36" href="https://s.tmimgcdn.com/img/logo-touch/android-chrome-36.png?d=6c4f4f8853"/>
+<link rel="icon" type="image/png" sizes="48x48" href="https://s.tmimgcdn.com/img/logo-touch/android-chrome-48.png?d=6c4f4f8853"/>
+<link rel="icon" type="image/png" sizes="72x72" href="https://s.tmimgcdn.com/img/logo-touch/android-chrome-72.png?d=6c4f4f8853"/>
+<link rel="icon" type="image/png" sizes="96x96" href="https://s.tmimgcdn.com/img/logo-touch/android-chrome-96.png?d=6c4f4f8853"/>
+<link rel="icon" type="image/png" sizes="144x144" href="https://s.tmimgcdn.com/img/logo-touch/android-chrome-144.png?d=6c4f4f8853"/>
+<link rel="icon" type="image/png" sizes="192x192" href="https://s.tmimgcdn.com/img/logo-touch/android-chrome-192.png?d=6c4f4f8853"/>
+<link rel="mask-icon" sizes="any" href="https://s.tmimgcdn.com/img/logo-touch/safari-pinned-tab.svg?d=6c4f4f8853">
+<link rel="apple-touch-icon" sizes="180x180" href="https://s.tmimgcdn.com/img/logo-touch/apple-touch-icon-precomposed.png?d=6c4f4f8853"/>
+<link rel="apple-touch-icon" sizes="180x180" href="https://s.tmimgcdn.com/img/logo-touch/apple-touch-icon-180.png?d=6c4f4f8853"/>
+<link rel="apple-touch-icon" sizes="152x152" href="https://s.tmimgcdn.com/img/logo-touch/apple-touch-icon-152.png?d=6c4f4f8853"/>
+<link rel="apple-touch-icon" sizes="144x144" href="https://s.tmimgcdn.com/img/logo-touch/apple-touch-icon-144.png?d=6c4f4f8853"/>
+<link rel="apple-touch-icon" sizes="120x120" href="https://s.tmimgcdn.com/img/logo-touch/apple-touch-icon-120.png?d=6c4f4f8853"/>
+<link rel="apple-touch-icon" sizes="114x114" href="https://s.tmimgcdn.com/img/logo-touch/apple-touch-icon-114.png?d=6c4f4f8853"/>
+<link rel="apple-touch-icon" sizes="76x76" href="https://s.tmimgcdn.com/img/logo-touch/apple-touch-icon-76.png?d=6c4f4f8853"/>
+<link rel="apple-touch-icon" sizes="72x72" href="https://s.tmimgcdn.com/img/logo-touch/apple-touch-icon-72.png?d=6c4f4f8853"/>
+<link rel="apple-touch-icon" sizes="60x60" href="https://s.tmimgcdn.com/img/logo-touch/apple-touch-icon-60.png?d=6c4f4f8853"/>
+<link rel="apple-touch-icon" sizes="57x57" href="https://s.tmimgcdn.com/img/logo-touch/apple-touch-icon-57.png?d=6c4f4f8853"/>
+<style>html{font-family:sans-serif;text-size-adjust:100%;font-size:62.5%;-webkit-tap-highlight-color:rgba(0,0,0,0)}h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{font-family:"PT Sans",sans-serif;font-weight:400;line-height:1.1}h6,.h6{font-size:12px}.clearfix::before,.clearfix::after{content:" ";display:table}.clearfix::after{clear:both}.icon-IE,.icon-safari,.icon-opera,.icon-firefox,.icon-chrome,.icon-css3,.icon-monster_dark,.icon-monster,.icon-tag,.icon-print,.icon-pop-out,.icon-play-dark,.icon-zencart,.icon-envelope,.icon-grid,.icon-list,.icon-videos,.icon-minus-sign,.icon-psd,.icon-edit,.icon-cart,.icon-search,.icon-coat-of-arms,.icon-star,.icon-time,.icon-number-one,.icon-chat,.icon-edit-2,.icon-file,.icon-arrow-right,.icon-arrow-left,.icon-arrow-down,.icon-arrow-up,.icon-arrow-small-right,.icon-arrow-small-left,.icon-arrow-small-up,.icon-arrow-small-down,.icon-user-add,.icon-checkmark,.icon-close,.font-icon{speak:none;font-style:normal;font-weight:400;font-variant-ligatures:normal;font-variant-caps:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased}.icon-cart::before{content:""}.icon-arrow-small-up::before{content:""}.icon-close::before{content:""}.tm-icon::before{speak:none;font-style:normal;font-weight:400;font-variant-ligatures:normal;font-variant-caps:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;font-family:tm-icomoon!important;background:none!important}.tm-icon.icon-cart::before{content:""}.tm-icon.icon-cross::before{content:""}.button{height:40px;line-height:40px;border-radius:3px;padding:0 20px;color:#fff;font-size:14px;position:relative;display:inline-block;vertical-align:top;transition:background .5s ease;text-align:center;border:0;cursor:pointer;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;font-weight:400!important;text-decoration:none!important;outline:none!important;box-shadow:none!important}.button.btn-important{background:linear-gradient(#f4511e 0px,#d84315 100%)}.button.tm-icon::before{width:20px;height:20px;margin-right:10px;display:inline-block;position:relative;top:-2px;font-size:20px;vertical-align:middle}.js-none{display:none!important}.thumbnails,.thumbContent{overflow:hidden;margin:0 -10px}.thumbContent{position:absolute;overflow:visible;display:none;z-index:99;box-shadow:rgba(35,50,56,0.3) 0 10px 20px;max-width:400px;border-radius:0 3px 3px;z-index:1052}.slides::after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0}.clear{clear:both;height:0;overflow:hidden}body{margin:0;font-family:"PT Sans",sans-serif;font-size:14px;line-height:1.42857;color:#243238;background-color:#f1f1f1;min-width:1024px;color:#243238;font-family:"PT Sans",sans-serif;background:#eceff1;-webkit-font-smoothing:antialiased}body a{color:#2196f3}*,::before,::after{box-sizing:border-box}a{color:#2196f3;text-decoration:none;cursor:pointer}[data-icon]::before,[class*="icon-"]::before{font-family:icomoon;content:attr(data-icon);speak:none;font-weight:400;font-variant-ligatures:normal;font-variant-caps:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased}img{border:0;vertical-align:middle;max-width:100%}ul,ol{margin-top:0;margin-bottom:10px}ul{list-style:none;margin:0;padding:0}@-webkit-keyframes progress-bar-stripes{0%{background-position:40px 0}100%{background-position:0 0}}@keyframes progress-bar-stripes{0%{background-position:40px 0}100%{background-position:0 0}}@-webkit-keyframes shake{0%,100%{transform:translate3d(0px,0px,0px)}10%,50%,90%{transform:translate3d(-10px,0px,0px)}30%,70%{transform:translate3d(10px,0px,0px)}}@keyframes shake{0%,100%{transform:translate3d(0px,0px,0px);3070transform:translate3d(10px,0px,0px)}}@-webkit-keyframes wow{95%{background:#4d90fe;color:#fff}100%{background:#fff;color:#243238}}@keyframes wow{95%{background:#4d90fe;color:#fff}100%{background:#fff;color:#243238}}@keyframes fadeIn{100%{opacity:1}}@keyframes fadeOut{100%{opacity:0}}@keyframes slideUp{100%{transform:translateY(-40px)}}@keyframes slideLeft{100%{transform:translateX(-40px)}}@keyframes slideRight{100%{transform:translateX(0px)}}@keyframes scaleUp{100%{transform:scale(2)}}@keyframes scaleDown{100%{transform:scale(1)}}@keyframes scaleToggleOne{50%{transform:scale(2)}100%{transform:scale(1)}}@keyframes scaleToggleTwo{20%{transform:scale(1)}60%{transform:scale(2)}100%{transform:scale(1)}}@keyframes scaleToggleThree{33%{transform:scale(1)}66%{transform:scale(2)}100%{transform:scale(1)}}@-webkit-keyframes rotateInUpRight{100%{transform-origin:right bottom 0;transform:none;opacity:1}}@keyframes rotateInUpRight{0%{transform-origin:right bottom 0;transform:rotate3d(0,0,1,-15deg) scale(0.8);opacity:0}100%{transform-origin:right bottom 0;transform:none;opacity:1}}@-webkit-keyframes rotateOutDownRight{0%{transform-origin:right bottom 0;opacity:1}100%{transform-origin:right bottom 0;transform:rotate3d(0,0,1,-15deg) scale(0.8);opacity:0}}@keyframes rotateOutDownRight{0%{transform-origin:right bottom 0;opacity:1}100%{transform-origin:right bottom 0;transform:rotate3d(0,0,1,-15deg) scale(0.8);opacity:0}}@keyframes zoomOut{0%{opacity:0}50%{opacity:1;transform:scale3d(0.33,0.33,0.33)}100%{opacity:1;transform:scale3d(0.33,0.33,0.33)}}@-webkit-keyframes painting-success{1%{background-color:#ddf7e5;box-shadow:#a8e4bb 0 1px 0 0 inset}100%{background-color:#ddf7e5;box-shadow:#a8e4bb 0 1px 0 0 inset}}@keyframes painting-success{1%{background-color:#ddf7e5;box-shadow:#a8e4bb 0 1px 0 0 inset}100%{background-color:#ddf7e5;box-shadow:#a8e4bb 0 1px 0 0 inset}}@-webkit-keyframes clearing-success{1%{background-color:#ddf7e5;box-shadow:#a8e4bb 0 1px 0 0 inset}}@keyframes clearing-success{1%{background-color:#ddf7e5;box-shadow:#a8e4bb 0 1px 0 0 inset}}@-webkit-keyframes painting-warning{1%{background-color:#fff8e1;box-shadow:#ffca28 0 1px 0 0 inset}100%{background-color:#fff8e1;box-shadow:#ffca28 0 1px 0 0 inset}}@keyframes painting-warning{1%{background-color:#fff8e1;box-shadow:#ffca28 0 1px 0 0 inset}100%{background-color:#fff8e1;box-shadow:#ffca28 0 1px 0 0 inset}}@-webkit-keyframes clearing-warning{1%{background-color:#fff8e1;box-shadow:#ffca28 0 1px 0 0 inset}}@keyframes clearing-warning{1%{background-color:#fff8e1;box-shadow:#ffca28 0 1px 0 0 inset}}@keyframes moveDown{100%{opacity:1;transform:translateY(0px) scale(1)}}@keyframes moveUp{100%{opacity:0;transform:translateY(-40px) scale(0.8)}}@keyframes fadeIn{100%{opacity:1}}@keyframes fadeOut{100%{opacity:0}}@keyframes slideUp{0%{height:120px}100%{height:0}}@keyframes slideDown{0%{height:0}100%{height:120px}}@-webkit-keyframes fadeIn{100%{opacity:1}}@keyframes fadeIn{100%{opacity:1}}@-webkit-keyframes fadeOut{100%{opacity:0}}@keyframes fadeOut{100%{opacity:0}}@-webkit-keyframes backSlideOut{25%{opacity:.5;transform:translateZ(-500px)}75%{opacity:.5;transform:translateZ(-500px) translateX(-200%)}100%{opacity:.5;transform:translateZ(-500px) translateX(-200%)}}@keyframes backSlideOut{25%{opacity:.5;transform:translateZ(-500px)}75%{opacity:.5;transform:translateZ(-500px) translateX(-200%)}100%{opacity:.5;transform:translateZ(-500px) translateX(-200%)}}@-webkit-keyframes backSlideIn{75%{opacity:.5;transform:translateZ(-500px)}100%{opacity:1;transform:translateZ(0px) translateX(0px)}}@keyframes backSlideIn{75%{opacity:.5;transform:translateZ(-500px)}100%{opacity:1;transform:translateZ(0px) translateX(0px)}}@-webkit-keyframes scaleToFade{100%{opacity:0;transform:scale(0.8)}}@keyframes scaleToFade{100%{opacity:0;transform:scale(0.8)}}@-webkit-keyframes goDown{0%{transform:translateY(-100%)}}@keyframes goDown{0%{transform:translateY(-100%)}}@-webkit-keyframes scaleUpFrom{0%{opacity:0;transform:scale(1.5)}}@keyframes scaleUpFrom{0%{opacity:0;transform:scale(1.5)}}@-webkit-keyframes scaleUpTo{100%{opacity:0;transform:scale(1.5)}}@keyframes scaleUpTo{100%{opacity:0;transform:scale(1.5)}}@keyframes moveToLeft{100%{transform:translateX(-100%)}}@keyframes moveFromLeft{0%{transform:translateX(-100%)}}@keyframes moveFromRight{0%{transform:translateX(100%)}}@keyframes moveToRight{100%{transform:translateX(100%)}}@-webkit-keyframes asd{20%{z-index:4}100%{z-index:4}}@keyframes asd{20%{z-index:4}100%{z-index:4}}@-webkit-keyframes turn{100%{transform:rotateX(0deg)}}@keyframes turn{100%{transform:rotateX(0deg)}}@-webkit-keyframes turn2{100%{transform:rotateX(-90deg)}}@keyframes turn2{100%{transform:rotateX(-90deg)}}@-webkit-keyframes show{100%{opacity:1}}@keyframes show{100%{opacity:1}}@-webkit-keyframes hide{100%{opacity:0}}@keyframes hide{100%{opacity:0}}h4,h5,h6{margin-top:10px;margin-bottom:10px;margin-top:10px;margin-bottom:10px}@-webkit-keyframes empty{0%{opacity:1}}@keyframes empty{0%{opacity:1}}@-webkit-keyframes fadeIn{0%{opacity:0}100%{opacity:1}}@keyframes fadeIn{0%{opacity:0}100%{opacity:1}}@-webkit-keyframes fadeOut{0%{opacity:1}100%{opacity:0}}@keyframes fadeOut{0%{opacity:1}100%{opacity:0}}@-webkit-keyframes backSlideOut{25%{opacity:.5;transform:translateZ(-500px)}75%{opacity:.5;transform:translateZ(-500px) translateX(-200%)}100%{opacity:.5;transform:translateZ(-500px) translateX(-200%)}}@keyframes backSlideOut{25%{opacity:.5;transform:translateZ(-500px)}75%{opacity:.5;transform:translateZ(-500px) translateX(-200%)}100%{opacity:.5;transform:translateZ(-500px) translateX(-200%)}}@-webkit-keyframes backSlideIn{0%,25%{opacity:.5;transform:translateZ(-500px) translateX(200%)}75%{opacity:.5;transform:translateZ(-500px)}100%{opacity:1;transform:translateZ(0px) translateX(0px)}}@keyframes backSlideIn{0%,25%{opacity:.5;transform:translateZ(-500px) translateX(200%)}75%{opacity:.5;transform:translateZ(-500px)}100%{opacity:1;transform:translateZ(0px) translateX(0px)}}@-webkit-keyframes scaleToFade{100%{opacity:0;transform:scale(0.8)}}@keyframes scaleToFade{100%{opacity:0;transform:scale(0.8)}}@-webkit-keyframes goDown{0%{transform:translateY(-100%)}}@keyframes goDown{0%{transform:translateY(-100%)}}@-webkit-keyframes scaleUpFrom{0%{opacity:0;transform:scale(1.5)}}@keyframes scaleUpFrom{0%{opacity:0;transform:scale(1.5)}}@-webkit-keyframes scaleUpTo{100%{opacity:0;transform:scale(1.5)}}@keyframes scaleUpTo{100%{opacity:0;transform:scale(1.5)}}@keyframes moveToLeft{100%{transform:translateX(-100%)}}@keyframes moveFromLeft{0%{transform:translateX(-100%)}}@keyframes moveFromRight{0%{transform:translateX(100%)}}@keyframes moveToRight{100%{transform:translateX(100%)}}[data-icon]::before,[class*="icon-"]::before{font-family:icomoon;content:attr(data-icon);speak:none;font-weight:400;font-variant-ligatures:normal;font-variant-caps:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased}.icon-IE,.icon-safari,.icon-opera,.icon-firefox,.icon-chrome,.icon-css3,.icon-monster_dark,.icon-monster,.icon-tag,.icon-print,.icon-pop-out,.icon-play-dark,.icon-zencart,.icon-envelope,.icon-grid,.icon-list,.icon-videos,.icon-minus-sign,.icon-psd,.icon-edit,.icon-cart,.icon-search,.icon-coat-of-arms,.icon-star,.icon-time,.icon-number-one,.icon-chat,.icon-edit-2,.icon-file,.icon-arrow-right,.icon-arrow-left,.icon-arrow-down,.icon-arrow-up,.icon-arrow-small-right,.icon-arrow-small-left,.icon-arrow-small-up,.icon-arrow-small-down,.icon-user-add,.icon-checkmark,.icon-close,.font-icon{speak:none;font-style:normal;font-weight:400;font-variant-ligatures:normal;font-variant-caps:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased}.icon-cart::before{content:""}.icon-arrow-small-up::before{content:""}.icon-close::before{content:""}.tm-icon::before{speak:none;font-style:normal;font-weight:400;font-variant-ligatures:normal;font-variant-caps:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;font-family:tm-icomoon!important;background:none!important}.tm-icon.icon-cart::before{content:""}.tm-icon.icon-cross::before{content:""}.button{height:40px;line-height:40px;border-radius:3px;padding:0 20px;color:#fff;font-size:14px;position:relative;display:inline-block;vertical-align:top;transition:background .5s ease;text-align:center;border:0;cursor:pointer;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;font-weight:400!important;text-decoration:none!important;outline:none!important;box-shadow:none!important}.button.btn-important{background:linear-gradient(#f4511e 0px,#d84315 100%)}.button.tm-icon::before{width:20px;height:20px;margin-right:10px;display:inline-block;position:relative;top:-2px;font-size:20px;vertical-align:middle}*,a:focus{outline:none medium!important}*{margin:0;padding:0}body,html{height:100%}html{font-size:100%}body{background-color:#fff;color:#666;font-family:"PT Sans",sans-serif;font-size:13px;line-height:16px;margin:0;min-width:320px;overflow:hidden;width:100%}a{color:#0179c6;text-decoration:none}ul{list-style-type:none}ul,ol{margin:0 0 8px 25px;padding:0}li{line-height:16px}img{border:0 none;height:auto;max-width:100%;vertical-align:middle}.clear{clear:both}.live-container{margin-left:auto;margin-right:auto}.live-container::before,.live-container::after{content:"";display:table;line-height:0}.live-container::after{clear:both}.clearfix::before,.clearfix::after{content:"";display:table;line-height:0}.js-none{display:none}.btn-group{display:inline-block;font-size:0;position:relative;vertical-align:middle;white-space:nowrap}#advanced{position:relative;z-index:998;left:0}#advanced .bg{height:59px;border-bottom:1px solid #373737;background:#242424}#advanced .top_container{width:100%}#advanced .brand{display:block;float:left;height:42px;width:54px;margin:11px 18px 0 20px;overflow:hidden;padding:0;position:relative;z-index:99}#advanced .theme-choose{float:left;padding:1px 11px 0 29px;position:relative;width:231px;border-left:1px solid #3d3d3d;cursor:pointer;background:#1b1b1b;height:58px;text-align:left;display:block;overflow:hidden}#advanced .theme-choose::before{content:"";position:absolute;width:15px;height:8px;top:28px;left:235px}#advanced .theme-choose::after{height:60px;top:0;border-right:1px solid #3d3d3d;position:absolute;content:"";right:1px}#advanced .theme-choose .slider-link{color:#fff;font-size:20px;max-width:195px;line-height:20px;height:59px;vertical-align:middle;display:table-cell}#advanced .slider-wrapper{background:#1b1b1b;border:0;display:none;font-size:12px;margin:0;width:100%;height:250px;padding:0 0 6px;position:absolute;text-align:left;top:-250px;z-index:-1}#advanced .slider-wrapper .owl-wr{max-width:1180px;margin:0 auto;padding:0 50px;position:relative}#advanced .slider-wrapper .slides{padding:0;margin:0}#advanced .slider-wrapper .slides li{width:295px;padding:0}#advanced .slider-wrapper .slides li .wrap{width:285px;display:block;margin-top:16px;padding:4px;border:1px solid #1b1b1b}#advanced .slider-wrapper .slides li .wrap .img-wrapper{overflow-y:hidden;height:180px;display:block}#advanced .slider-wrapper .slides li .wrap img{width:100%}#advanced .slider-wrapper .slides li h6{position:relative;font-size:20px;color:#dddbdb;font-weight:400;padding:13px 10px;text-align:center;line-height:18px}#advanced .name_template{float:left;position:relative;cursor:pointer}#advanced .name_template .link-1{position:relative;top:26px;left:23px}#advanced .name_template .link-1 span{width:15px;display:block;background:#fff;height:2px;margin:0 0 2px;transition:transform .3s}#advanced #popover2{left:-2px;position:absolute;text-align:left;top:60px;z-index:99999999;display:none}#advanced #popover2 a{color:#777;background:#242424;font-size:16px;display:inline-block;padding:18px 20px;line-height:22px;width:238px;border-width:0 1px 1px;border-image:initial;border-color:initial #3d3d3d #3d3d3d;border-style:initial solid solid}.responsive-block{width:230px;height:50px;position:absolute;top:-5px;display:none;left:49%;margin-left:-130px}#responsivator{float:left;margin:17px 0 0}#responsivator li{float:left}#desktop,#tablet-portrait,#tablet-landscape,#iphone-portrait,#iphone-landscape{position:relative;cursor:pointer;display:block}#desktop{top:4px;width:32px;height:30px;margin-right:19px}#tablet-portrait{top:8px;width:22px;height:27px;margin-right:17px}#tablet-landscape{top:14px;margin-right:17px;width:27px;height:22px}#iphone-portrait{top:11px;width:15px;height:25px;margin-right:18px}#iphone-landscape{top:21px;width:25px;height:15px;margin-right:20px}#qr{left:-2px;position:relative;top:-5px}#qr .img-wrapper{padding:40px 40px 21px}#qr .icon-close{cursor:pointer}#qr .icon-close::before{color:#4eb7fe;font-size:18px;position:absolute;top:10px;right:8px}#qr-open{position:absolute;display:inline-block;padding:16px 15px 15px 17px;border-width:0 1px;border-image:initial;top:-6px;cursor:pointer;border-color:initial #3d3d3d;border-style:initial solid}#qr-open span{background-size:initial;background-repeat:no-repeat;background-attachment:initial;background-origin:initial;background-clip:initial;background-color:initial;display:block;width:27px;height:27px;background-position:-198px 0!important}#qr-content{background:#fff;margin:0;position:absolute;right:-61px;top:53px;width:260px;border:3px solid #e2e2e2}#qr-text{color:#4eb7fe;padding-bottom:22px;font-weight:300;font-size:16px;line-height:36px;text-align:center}.topbar_info{position:relative;margin-right:60px;max-width:610px;height:59px;float:right;display:block}.topbar_info .js-cart-item-info{color:#fff;display:block;font-size:16px;padding:23px 15px 0;position:relative;height:59px;float:right;vertical-align:middle}.topbar_info .js-none{display:none!important}.topbar_info .price-wrapper{display:inline-block;position:relative;color:#777;padding:0 33px 0 10px;text-align:right;height:100%;float:right;overflow:hidden}.topbar_info .price-wrapper .price-title{display:inline-block;font-size:16px;font-weight:300;line-height:21px;max-width:275px;text-align:right;position:relative;vertical-align:middle;overflow-y:hidden;max-height:41px}.topbar_info .price-wrapper .price{color:#4eb7fe;font-weight:700;font-size:24px;line-height:60px;padding:0 17px 0 18px;display:inline-block;height:60px;vertical-align:middle;-webkit-font-smoothing:antialiased}.topbar_info .price-wrapper.dropdown-arrow{cursor:pointer}.topbar_info .price-wrapper.dropdown-arrow .price::before{content:"";position:absolute;width:15px;height:8px;top:27px;right:14px}.topbar_info .buy_now{display:inline;max-width:143px;max-height:57px;padding-top:10px;position:relative;float:right}.box-drop{display:none;list-style:none outside none;min-width:160px;z-index:1000;background:#242424;position:absolute;top:60px;right:203px}.list-drop{margin:0;padding:0}.list-drop li{border-width:0 1px 1px;border-image:initial;font-size:16px;padding:19px 48px 22px 15px;position:relative;color:#777;line-height:16px;text-align:right;font-weight:300;cursor:pointer;border-color:initial #3d3d3d #3d3d3d;border-style:initial solid solid}.list-drop li .js-drop{padding:0 0 0 10px}.list-drop li .recommended{display:block;position:absolute;width:84px;height:13px;top:-19px;margin-top:6px;right:3px}.list-drop li .recommended-wrap{position:relative;vertical-align:middle}.list-drop .price{color:#4eb7fe;font-weight:700;font-size:24px;position:relative;padding-left:10px;vertical-align:middle}#headerlivedemo .trigger{background:#242424;cursor:pointer;display:block;height:59px;position:absolute;right:0;top:0;width:60px;z-index:999}#headerlivedemo .trigger::before{color:#fff;font-size:16px;top:22px;position:absolute;left:23px}#headerlivedemo .trigger::after{border-bottom:1px solid #373737;content:"";display:block;position:absolute;height:59px;right:0;width:60px}iframe,#iframelive{width:100%;background-color:#fff}#iframelive{height:100%;background:#7d7d7d}#frameWrapper{background:none 0 0 repeat scroll transparent;height:100%;margin:0}#frame{position:relative;height:100%;border:0}@-webkit-keyframes show_notice{0%{opacity:0}100%{margin-top:20px;opacity:1}}@keyframes show_notice{0%{opacity:0}100%{margin-top:20px;opacity:1}}@-webkit-keyframes hide_notice{0%{transform:scale(1);opacity:1}100%{transform:scale(0.8);opacity:0}}@keyframes hide_notice{0%{transform:scale(1);opacity:1}100%{transform:scale(0.8);opacity:0}}@-webkit-keyframes show_mascot{0%{left:-164px;opacity:0;transform:scale(0.8)}100%{left:-70px;opacity:1;transform:scale(1)}}@keyframes show_mascot{0%{left:-164px;opacity:0;transform:scale(0.8)}100%{left:-70px;opacity:1;transform:scale(1)}}@-webkit-keyframes hide_mascot{0%{left:-70px;opacity:1;transform:scale(1)}100%{left:-164px;opacity:0;transform:scale(0.8)}}@keyframes hide_mascot{0%{left:-70px;opacity:1;transform:scale(1)}100%{left:-164px;opacity:0;transform:scale(0.8)}}.button{border:0;box-sizing:border-box;color:#fff;cursor:pointer;display:inline-block;margin:0;overflow:hidden;padding-bottom:0;padding-top:0;text-size-adjust:100%;touch-action:manipulation;text-align:center}.button *,.button ::after,.button ::before{box-sizing:inherit}.button::-webkit-file-upload-button{-webkit-appearance:button;font-style:inherit;font-variant:inherit;font-weight:inherit;font-stretch:inherit;font-size:inherit;line-height:inherit;font-family:inherit}@-webkit-keyframes TMQuarkDropdownOpenContent{0%{opacity:0;transform:scaleY(0)}100%{opacity:1;transform:scaleY(1)}}@keyframes TMQuarkDropdownOpenContent{0%{opacity:0;transform:scaleY(0)}100%{opacity:1;transform:scaleY(1)}}@-webkit-keyframes TMQuarkDropdownCloseContent{0%{opacity:1;transform:scaleY(1)}100%{opacity:0;transform:scaleY(0)}}@keyframes TMQuarkDropdownCloseContent{0%{opacity:1;transform:scaleY(1)}100%{opacity:0;transform:scaleY(0)}}@-webkit-keyframes shake{0%,100%{transform:translateZ(0px)}10%,50%,90%{transform:translate3d(-10px,0px,0px)}30%,70%{transform:translate3d(10px,0px,0px)}}@keyframes shake{0%,100%{transform:translateZ(0px)}10%,50%,90%{transform:translate3d(-10px,0px,0px)}30%,70%{transform:translate3d(10px,0px,0px)}}@-webkit-keyframes animation-tooltip_right{0%{opacity:0;transform:translateX(-40px) scale(0.8)}100%{opacity:1;transform:translateX(0px) scale(1)}}@keyframes animation-tooltip_right{0%{opacity:0;transform:translateX(-40px) scale(0.8)}100%{opacity:1;transform:translateX(0px) scale(1)}}@-webkit-keyframes animation-tooltip_right_reverse{100%{opacity:0;transform:scale(0.8) translateX(-40px)}}@keyframes animation-tooltip_right_reverse{100%{opacity:0;transform:scale(0.8) translateX(-40px)}}@-webkit-keyframes animation-tooltip_left{0%{opacity:0;transform:scale(0.8) translateX(40px)}100%{opacity:1;transform:scale(1) translateX(0px)}}@keyframes animation-tooltip_left{0%{opacity:0;transform:scale(0.8) translateX(40px)}100%{opacity:1;transform:scale(1) translateX(0px)}}@-webkit-keyframes animation-tooltip_left_reverse{100%{opacity:0;transform:scale(0.8) translateX(40px)}}@keyframes animation-tooltip_left_reverse{100%{opacity:0;transform:scale(0.8) translateX(40px)}}@-webkit-keyframes animation-tooltip_bottom{0%{opacity:0;transform:scale(0.8) translateY(-40px)}100%{opacity:1;transform:scale(1) translateY(0px)}}@keyframes animation-tooltip_bottom{0%{opacity:0;transform:scale(0.8) translateY(-40px)}100%{opacity:1;transform:scale(1) translateY(0px)}}@-webkit-keyframes animation-tooltip_bottom_reverse{100%{opacity:0;transform:scale(0.8) translateY(-40px)}}@keyframes animation-tooltip_bottom_reverse{100%{opacity:0;transform:scale(0.8) translateY(-40px)}}@-webkit-keyframes animation-tooltip_top{0%{opacity:0;transform:scale(0.8) translateY(40px)}100%{opacity:1;transform:scale(1) translateY(0px)}}@keyframes animation-tooltip_top{0%{opacity:0;transform:scale(0.8) translateY(40px)}100%{opacity:1;transform:scale(1) translateY(0px)}}@-webkit-keyframes animation-tooltip_top_reverse{100%{opacity:0;transform:scale(0.8) translateY(40px)}}@keyframes animation-tooltip_top_reverse{100%{opacity:0;transform:scale(0.8) translateY(40px)}}@-webkit-keyframes showSuccessField{0%{background:#eceff1;box-shadow:#cfd8dc 0 1px 0 0 inset}100%{background:#ddf7e5;box-shadow:#a8e4bb 0 1px 0 0 inset}}@keyframes showSuccessField{0%{background:#eceff1;box-shadow:#cfd8dc 0 1px 0 0 inset}100%{background:#ddf7e5;box-shadow:#a8e4bb 0 1px 0 0 inset}}@-webkit-keyframes hideSuccessField{0%{background:#ddf7e5;box-shadow:#a8e4bb 0 1px 0 0 inset}100%{background:#eceff1;box-shadow:#cfd8dc 0 1px 0 0 inset}}@keyframes hideSuccessField{0%{background:#ddf7e5;box-shadow:#a8e4bb 0 1px 0 0 inset}100%{background:#eceff1;box-shadow:#cfd8dc 0 1px 0 0 inset}}@-webkit-keyframes showErrorField{0%{background:#eceff1;box-shadow:#cfd8dc 0 1px 0 0 inset}100%{background:#fff8e1;box-shadow:#ffca28 0 1px 0 0 inset}}@keyframes showErrorField{0%{background:#eceff1;box-shadow:#cfd8dc 0 1px 0 0 inset}100%{background:#fff8e1;box-shadow:#ffca28 0 1px 0 0 inset}}@-webkit-keyframes hideErrorField{0%{background:#fff8e1;box-shadow:#ffca28 0 1px 0 0 inset}100%{background:#eceff1;box-shadow:#cfd8dc 0 1px 0 0 inset}}@keyframes hideErrorField{0%{background:#fff8e1;box-shadow:#ffca28 0 1px 0 0 inset}100%{background:#eceff1;box-shadow:#cfd8dc 0 1px 0 0 inset}}@-webkit-keyframes showPopupContent{0%{opacity:0;transform:scale(0.8)}100%{opacity:1;transform:scale(1)}}@keyframes showPopupContent{0%{opacity:0;transform:scale(0.8)}100%{opacity:1;transform:scale(1)}}@-webkit-keyframes hidePopupContent{0%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(0.8)}}@keyframes hidePopupContent{0%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(0.8)}}@-webkit-keyframes loaderLineMove{50%{left:75%}}@keyframes loaderLineMove{50%{left:75%}}.svg::before{background-repeat:no-repeat}</style>
+<script>
+    // https://github.com/filamentgroup/loadCSS
+    !function(e){"use strict"
+        var n=function(n,t,o){function i(e){return f.body?e():void setTimeout(function(){i(e)})}var d,r,a,l,f=e.document,s=f.createElement("link"),u=o||"all"
+            return t?d=t:(r=(f.body||f.getElementsByTagName("head")[0]).childNodes,d=r[r.length-1]),a=f.styleSheets,s.rel="stylesheet",s.href=n,s.media="only x",i(function(){d.parentNode.insertBefore(s,t?d:d.nextSibling)}),l=function(e){for(var n=s.href,t=a.length;t--;)if(a[t].href===n)return e()
+                setTimeout(function(){l(e)})},s.addEventListener&&s.addEventListener("load",function(){this.media=u}),s.onloadcssdefined=l,l(function(){s.media!==u&&(s.media=u)}),s};
+        "undefined"!=typeof exports?exports.loadCSS=n:e.loadCSS=n}("undefined"!=typeof global?global:this);
+    function isLocalStorageExists() {
+        try {
+            localStorage.setItem('t*',1);
+            localStorage.removeItem('t*');
+            return true;
+        } catch(e) {
+            return false;
+        }
+    }
+</script>
+<script>
+    </script>
+<script>
+					loadCSS("https://s.tmimgcdn.com/css/standalone/livemonstroid.css?d=1699766da5");
+			loadCSS("//fonts.googleapis.com/css?family=Lato:400,700,300");
+				loadCSS("https://s.tmimgcdn.com/css/owl.carousel.css?d=1699766da5");
+		loadCSS("https://s.tmimgcdn.com/css/owl.theme.css?d=1699766da5");
+		</script>
+<script type="text/javascript">
+	window.template = {'id':55555 , 'price':68}
+</script>
+<script>document.cookie = "callback_notice=closed; expires=03 Jul 2036 21:44:38 GMT; domain=.templatemonster.com; path=/";</script>
+<script>var chosenVariation = 1;</script>
+<link rel="canonical" href="https://www.templatemonster.com/de/demo/55555.html"/>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" id="demo-page" class=" is-responsive">
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MS2BNB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-MS2BNB');</script>
+<div class="relative js-demo-upper-menu js-template-id" id="headerlivedemo" data-template_id="55555" data-brand="WordPress" data-categories="" data-variant="premium" data-product_name="WordPress Vorlagen">
+<div id="advanced" class="livemonstroid">
+<div class="bg">
+<div class="top_container live-container">
+<a class="brand" href="https://www.templatemonster.com/de/wordpress-themen-tipo-55555.html"></a>
+<div class="theme-choose js-popup-open" data-popupi="js-popupi-4">  
+<span class="slider-link ">Monstroid</span>
+</div>
+<div class="slider-wrapper js-popup-content js-popupi-4 js-demo-flexslider">
+<div class="owl-wr">
+<ul id="monstroid-templates" class="slides" itemscope itemtype="http://schema.org/ItemList" data-list="Monstroid slider">
+<li class="thumbnail" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<div class="thumbnail-container"><div class="js-monstroid-thumbnail" data-tid="58412" data-brand="WordPress" data-categories="Unterhaltung, Spiele und Nachtleben / Spiele Vorlagen" data-variant="premium" data-product_name="WordPress Vorlagen">
+<a href="https://www.templatemonster.com/de/demo/58412.html" class="thumb-wr js-view-product" data-tid="58412">
+<div class="wrap">
+<span class="img-wrapper">
+<img class="lazyOwl" data-src="https://s.tmimgcdn.com/scr/58400/responsives-wordpress-theme-fur-spiele_58412-original.jpg?width=400&amp;height=400" alt="Responsives WordPress Theme für Spiele " title="Games WPML Ready WordPress Theme Kleiner Screenshot" width="400" height="400">
+</span>
+</div>
+<h6>Games</h6>
+</a>
+</div>
+</div>
+</li>
+<li class="thumbnail" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<div class="thumbnail-container"><div class="js-monstroid-thumbnail" data-tid="58390" data-brand="WordPress" data-categories="Essen und Restaurant / Cafe und Restaurant Vorlagen" data-variant="premium" data-product_name="WordPress Vorlagen">
+<a href="https://www.templatemonster.com/de/demo/58390.html" class="thumb-wr js-view-product" data-tid="58390">
+<div class="wrap">
+<span class="img-wrapper">
+<img class="lazyOwl" data-src="https://s.tmimgcdn.com/scr/58300/responsives-wordpress-theme-fur-cafe-und-restaurant_58390-original.jpg?width=400&amp;height=400" alt="Responsives WordPress Theme für Cafe und Restaurant " title="Spanish Restaurant Bootstrap WordPress Theme Kleiner Screenshot" width="400" height="400">
+</span>
+</div>
+<h6>Spanish Restaurant</h6>
+</a>
+</div>
+</div>
+</li>
+<li class="thumbnail" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<div class="thumbnail-container"><div class="js-monstroid-thumbnail" data-tid="58658" data-brand="WordPress" data-categories="Gesellschaften und Menschen  / Politik Vorlagen / Politischer Kandidat Vorlagen" data-variant="premium" data-product_name="WordPress Vorlagen">
+<a href="https://www.templatemonster.com/de/demo/58658.html" class="thumb-wr js-view-product" data-tid="58658">
+<div class="wrap">
+<span class="img-wrapper">
+<img class="lazyOwl" data-src="https://s.tmimgcdn.com/scr/58600/responsives-wordpress-theme-fur-politischer-kandidat_58658-original.jpg?width=400&amp;height=400" alt="Responsives WordPress Theme für Politischer Kandidat " title="Political Candidate Bootstrap WordPress Theme Kleiner Screenshot" width="400" height="400">
+</span>
+</div>
+<h6>Political Candidate</h6>
+</a>
+</div>
+</div>
+</li>
+<li class="thumbnail" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<div class="thumbnail-container"><div class="js-monstroid-thumbnail" data-tid="55973" data-brand="WordPress" data-categories="Design und Fotografie  / Design / Designstudio Vorlagen" data-variant="premium" data-product_name="WordPress Vorlagen">
+<a href="https://www.templatemonster.com/de/demo/55973.html" class="thumb-wr js-view-product" data-tid="55973">
+<div class="wrap">
+<span class="img-wrapper">
+<img class="lazyOwl" data-src="https://s.tmimgcdn.com/scr/55900/responsives-wordpress-theme-fur-designstudio_55973-original.jpg?width=400&amp;height=400" alt="Responsives WordPress Theme für Designstudio " title="Stock Photo Parallax WordPress Vorlage Kleiner Screenshot" width="400" height="400">
+</span>
+</div>
+<h6>Stock Photo</h6>
+</a>
+</div>
+</div>
+</li>
+<li class="thumbnail" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<div class="thumbnail-container"><div class="js-monstroid-thumbnail" data-tid="56013" data-brand="WordPress" data-categories="Design und Fotografie  / Design / Architektur" data-variant="premium" data-product_name="WordPress Vorlagen">
+<a href="https://www.templatemonster.com/de/demo/56013.html" class="thumb-wr js-view-product" data-tid="56013">
+<div class="wrap">
+<span class="img-wrapper">
+<img class="lazyOwl" data-src="https://s.tmimgcdn.com/scr/56000/responsives-wordpress-theme-fur-architektur_56013-original.jpg?width=400&amp;height=400" alt="Responsives WordPress Theme für Architektur" title="Stock Photo Parallax WordPress Vorlage Kleiner Screenshot" width="400" height="400">
+</span>
+</div>
+<h6>Stock Photo</h6>
+</a>
+</div>
+</div>
+</li>
+<li class="thumbnail" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<div class="thumbnail-container"><div class="js-monstroid-thumbnail" data-tid="55966" data-brand="WordPress" data-categories="Sports, Außensport und Reisen / Sport Vorlagen / Mehr Sport / Gleitschirmfliegen Vorlagen" data-variant="premium" data-product_name="WordPress Vorlagen">
+<a href="https://www.templatemonster.com/de/demo/55966.html" class="thumb-wr js-view-product" data-tid="55966">
+<div class="wrap">
+<span class="img-wrapper">
+<img class="lazyOwl" data-src="https://s.tmimgcdn.com/scr/55900/responsives-wordpress-theme-fur-gleitschirmfliegen_55966-original.jpg?width=400&amp;height=400" alt="Responsives WordPress Theme für Gleitschirmfliegen " title="Travel Bootstrap WordPress Theme Kleiner Screenshot" width="400" height="400">
+</span>
+</div>
+<h6>Travel</h6>
+</a>
+</div>
+</div>
+</li>
+<li class="thumbnail" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<div class="thumbnail-container"><div class="js-monstroid-thumbnail" data-tid="55962" data-brand="WordPress" data-categories="Design und Fotografie  / Fotografie Vorlagen" data-variant="premium" data-product_name="WordPress Vorlagen">
+<a href="https://www.templatemonster.com/de/demo/55962.html" class="thumb-wr js-view-product" data-tid="55962">
+<div class="wrap">
+<span class="img-wrapper">
+<img class="lazyOwl" data-src="https://s.tmimgcdn.com/scr/55900/responsives-wordpress-theme-fur-fotografie_55962-original.jpg?width=400&amp;height=400" alt="Responsives WordPress Theme für Fotografie " title="Stock Photo Bootstrap WordPress Theme Kleiner Screenshot" width="400" height="400">
+</span>
+</div>
+<h6>Stock Photo</h6>
+</a>
+</div>
+</div>
+</li>
+<li class="thumbnail" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<div class="thumbnail-container"><div class="js-monstroid-thumbnail" data-tid="57688" data-brand="WordPress" data-categories="Design und Fotografie  / Design / Architektur / Baufirma " data-variant="premium" data-product_name="WordPress Vorlagen">
+<a href="https://www.templatemonster.com/de/demo/57688.html" class="thumb-wr js-view-product" data-tid="57688">
+<div class="wrap">
+<span class="img-wrapper">
+<img class="lazyOwl" data-src="https://s.tmimgcdn.com/scr/57600/responsives-wordpress-theme-fur-baufirma_57688-original.jpg?width=400&amp;height=400" alt="Responsives WordPress Theme für Baufirma " title="Construction Company Responsive WordPress Theme Kleiner Screenshot" width="400" height="400">
+</span>
+</div>
+<h6>Construction Company</h6>
+</a>
+</div>
+</div>
+</li>
+<li class="thumbnail" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<div class="thumbnail-container"><div class="js-monstroid-thumbnail" data-tid="55951" data-brand="WordPress" data-categories="Business und Dienstleistungen" data-variant="premium" data-product_name="WordPress Vorlagen">
+<a href="https://www.templatemonster.com/de/demo/55951.html" class="thumb-wr js-view-product" data-tid="55951">
+<div class="wrap">
+<span class="img-wrapper">
+<img class="lazyOwl" data-src="https://s.tmimgcdn.com/scr/55900/responsives-wordpress-theme-fur-business-und-dienstleistungen_55951-original.jpg?width=400&amp;height=400" alt="Responsives WordPress Theme für Business und Dienstleistungen" title="Accounting Website WPML Ready WordPress Vorlage Kleiner Screenshot" width="400" height="400">
+</span>
+</div>
+<h6>Accounting Website</h6>
+</a>
+</div>
+</div>
+</li>
+<li class="thumbnail" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<div class="thumbnail-container"><div class="js-monstroid-thumbnail" data-tid="55947" data-brand="WordPress" data-categories="Business und Dienstleistungen / Landwirtschaft Vorlagen / Farm Vorlagen" data-variant="premium" data-product_name="WordPress Vorlagen">
+<a href="https://www.templatemonster.com/de/demo/55947.html" class="thumb-wr js-view-product" data-tid="55947">
+<div class="wrap">
+<span class="img-wrapper">
+<img class="lazyOwl" data-src="https://s.tmimgcdn.com/scr/55900/responsives-wordpress-theme-fur-farm_55947-original.jpg?width=400&amp;height=400" alt="Responsives WordPress Theme für Farm " title="Accounting Website WPML Ready WordPress Vorlage Kleiner Screenshot" width="400" height="400">
+</span>
+</div>
+<h6>Accounting Website</h6>
+</a>
+</div>
+</div>
+</li>
+<li class="thumbnail" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<div class="thumbnail-container"><div class="js-monstroid-thumbnail" data-tid="55820" data-brand="WordPress" data-categories="Gesellschaften und Menschen  / Partnersuche Vorlage" data-variant="premium" data-product_name="WordPress Vorlagen">
+<a href="https://www.templatemonster.com/de/demo/55820.html" class="thumb-wr js-view-product" data-tid="55820">
+<div class="wrap">
+<span class="img-wrapper">
+<img class="lazyOwl" data-src="https://s.tmimgcdn.com/scr/55800/responsives-wordpress-theme-fur-partnersuche_55820-original.jpg?width=400&amp;height=400" alt="Responsives WordPress Theme für Partnersuche " title="Wedding Venues Responsive WordPress Theme Kleiner Screenshot" width="400" height="400">
+</span>
+</div>
+<h6>Wedding Venues</h6>
+</a>
+</div>
+</div>
+</li>
+<li class="thumbnail" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<div class="thumbnail-container"><div class="js-monstroid-thumbnail" data-tid="55819" data-brand="WordPress" data-categories="Business und Dienstleistungen / Wartungsservice Vorlagen / Rasenmähen" data-variant="premium" data-product_name="WordPress Vorlagen">
+<a href="https://www.templatemonster.com/de/demo/55819.html" class="thumb-wr js-view-product" data-tid="55819">
+<div class="wrap">
+<span class="img-wrapper">
+<img class="lazyOwl" data-src="https://s.tmimgcdn.com/scr/55800/responsives-wordpress-theme-fur-rasenmahen_55819-original.jpg?width=400&amp;height=400" alt="Responsives WordPress Theme für Rasenmähen" title="Accounting Website Bootstrap WordPress Vorlage Kleiner Screenshot" width="400" height="400">
+</span>
+</div>
+<h6>Accounting Website</h6>
+</a>
+</div>
+</div>
+</li>
+<li class="thumbnail" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<div class="thumbnail-container"><div class="js-monstroid-thumbnail" data-tid="55806" data-brand="WordPress" data-categories="Kunst und Kultur / Museum Vorlagen" data-variant="premium" data-product_name="WordPress Vorlagen">
+<a href="https://www.templatemonster.com/de/demo/55806.html" class="thumb-wr js-view-product" data-tid="55806">
+<div class="wrap">
+<span class="img-wrapper">
+<img class="lazyOwl" data-src="https://s.tmimgcdn.com/scr/55800/responsives-wordpress-theme-fur-museum_55806-original.jpg?width=400&amp;height=400" alt="Responsives WordPress Theme für Museum " title="Sculpture Bootstrap WordPress Theme Kleiner Screenshot" width="400" height="400">
+</span>
+</div>
+<h6>Sculpture</h6>
+</a>
+</div>
+</div>
+</li>
+<li class="thumbnail" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<div class="thumbnail-container"><div class="js-monstroid-thumbnail" data-tid="55771" data-brand="WordPress" data-categories="Kunst und Kultur / Kunst Vorlagen / Druckerei Vorlagen" data-variant="premium" data-product_name="WordPress Vorlagen">
+<a href="https://www.templatemonster.com/de/demo/55771.html" class="thumb-wr js-view-product" data-tid="55771">
+<div class="wrap">
+<span class="img-wrapper">
+<img class="lazyOwl" data-src="https://s.tmimgcdn.com/scr/55700/responsives-wordpress-theme-fur-druckerei_55771-original.jpg?width=400&amp;height=400" alt="Responsives WordPress Theme für Druckerei " title="Sculpture WPML Ready WordPress Vorlage Kleiner Screenshot" width="400" height="400">
+</span>
+</div>
+<h6>Sculpture</h6>
+</a>
+</div>
+</div>
+</li>
+<li class="thumbnail" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<div class="thumbnail-container"><div class="js-monstroid-thumbnail" data-tid="55761" data-brand="WordPress" data-categories="Essen und Restaurant / Cafe und Restaurant Vorlagen" data-variant="premium" data-product_name="WordPress Vorlagen">
+<a href="https://www.templatemonster.com/de/demo/55761.html" class="thumb-wr js-view-product" data-tid="55761">
+<div class="wrap">
+<span class="img-wrapper">
+<img class="lazyOwl" data-src="https://s.tmimgcdn.com/scr/55700/responsives-wordpress-theme-fur-cafe-und-restaurant_55761-original.jpg?width=400&amp;height=400" alt="Responsives WordPress Theme für Cafe und Restaurant " title="Spanish Restaurant Responsive WordPress Vorlage Kleiner Screenshot" width="400" height="400">
+</span>
+</div>
+<h6>Spanish Restaurant</h6>
+</a>
+</div>
+</div>
+</li>
+<li class="thumbnail" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<div class="thumbnail-container"><div class="js-monstroid-thumbnail" data-tid="57687" data-brand="WordPress" data-categories="Business und Dienstleistungen" data-variant="premium" data-product_name="WordPress Vorlagen">
+<a href="https://www.templatemonster.com/de/demo/57687.html" class="thumb-wr js-view-product" data-tid="57687">
+<div class="wrap">
+<span class="img-wrapper">
+<img class="lazyOwl" data-src="https://s.tmimgcdn.com/scr/57600/responsives-wordpress-theme-fur-business-und-dienstleistungen_57687-original.jpg?width=400&amp;height=400" alt="Responsives WordPress Theme für Business und Dienstleistungen" title="Accounting Website Responsive WordPress Vorlage Kleiner Screenshot" width="400" height="400">
+</span>
+</div>
+<h6>Accounting Website</h6>
+</a>
+</div>
+</div>
+</li>
+<li class="thumbnail" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<div class="thumbnail-container"><div class="js-monstroid-thumbnail" data-tid="55745" data-brand="WordPress" data-categories="Business und Dienstleistungen / Verkehrswesen Vorlagen" data-variant="premium" data-product_name="WordPress Vorlagen">
+<a href="https://www.templatemonster.com/de/demo/55745.html" class="thumb-wr js-view-product" data-tid="55745">
+<div class="wrap">
+<span class="img-wrapper">
+<img class="lazyOwl" data-src="https://s.tmimgcdn.com/scr/55700/wordpress-theme-namens-privates-verkehrsunternehmen_55745-original.jpg?width=400&amp;height=400" alt="WordPress Theme namens &quot;Privates Verkehrsunternehmen&quot;" title="Privates Verkehrsunternehmen Parallax WordPress Vorlage Kleiner Screenshot" width="400" height="400">
+</span>
+</div>
+<h6>Privates Verkehrsunternehmen</h6>
+</a>
+</div>
+</div>
+</li>
+<li class="thumbnail" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<div class="thumbnail-container"><div class="js-monstroid-thumbnail" data-tid="55725" data-brand="WordPress" data-categories="Essen und Restaurant / Café Vorlagen / Cocktailbar Vorlagen" data-variant="premium" data-product_name="WordPress Vorlagen">
+<a href="https://www.templatemonster.com/de/demo/55725.html" class="thumb-wr js-view-product" data-tid="55725">
+<div class="wrap">
+<span class="img-wrapper">
+<img class="lazyOwl" data-src="https://s.tmimgcdn.com/scr/55700/wordpress-theme-namens-fruit-bar_55725-original.jpg?width=400&amp;height=400" alt="WordPress Theme namens &quot;Fruit Bar&quot;" title="Fruit Bar Parallax WordPress Vorlage Kleiner Screenshot" width="400" height="400">
+</span>
+</div>
+<h6>Fruit Bar</h6>
+</a>
+</div>
+</div>
+</li>
+<li class="thumbnail" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<div class="thumbnail-container"><div class="js-monstroid-thumbnail" data-tid="55722" data-brand="WordPress" data-categories="Computers und Internet / Software Vorlagen / Softwarefirma Vorlagen" data-variant="premium" data-product_name="WordPress Vorlagen">
+<a href="https://www.templatemonster.com/de/demo/55722.html" class="thumb-wr js-view-product" data-tid="55722">
+<div class="wrap">
+<span class="img-wrapper">
+<img class="lazyOwl" data-src="https://s.tmimgcdn.com/scr/55700/wordpress-theme-namens-musik-app-website_55722-original.jpg?width=400&amp;height=400" alt="WordPress Theme namens &quot;Musik-App-Website&quot;" title="Musik-App-Website Bootstrap WordPress Theme Kleiner Screenshot" width="400" height="400">
+</span>
+</div>
+<h6>Musik-App-Website</h6>
+</a>
+</div>
+</div>
+</li>
+<li class="thumbnail" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<div class="thumbnail-container"><div class="js-monstroid-thumbnail" data-tid="55723" data-brand="WordPress" data-categories="Business und Dienstleistungen" data-variant="premium" data-product_name="WordPress Vorlagen">
+<a href="https://www.templatemonster.com/de/demo/55723.html" class="thumb-wr js-view-product" data-tid="55723">
+<div class="wrap">
+<span class="img-wrapper">
+<img class="lazyOwl" data-src="https://s.tmimgcdn.com/scr/55700/responsives-wordpress-theme-fur-business-und-dienstleistungen_55723-original.jpg?width=400&amp;height=400" alt="Responsives WordPress Theme für Business und Dienstleistungen" title="Accounting Website WPML Ready WordPress Vorlage Kleiner Screenshot" width="400" height="400">
+</span>
+</div>
+<h6>Accounting Website</h6>
+</a>
+</div>
+</div>
+</li>
+<li class="thumbnail" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<div class="thumbnail-container"><div class="js-monstroid-thumbnail" data-tid="55716" data-brand="WordPress" data-categories="Business und Dienstleistungen / Medien Vorlagen  / Filmstudio" data-variant="premium" data-product_name="WordPress Vorlagen">
+<a href="https://www.templatemonster.com/de/demo/55716.html" class="thumb-wr js-view-product" data-tid="55716">
+<div class="wrap">
+<span class="img-wrapper">
+<img class="lazyOwl" data-src="https://s.tmimgcdn.com/scr/55700/wordpress-theme-namens-videoaufnahmen-_55716-original.jpg?width=400&amp;height=400" alt="WordPress Theme namens &quot;Videoaufnahmen &quot;" title="Videoaufnahmen  Responsive WordPress Theme Kleiner Screenshot" width="400" height="400">
+</span>
+</div>
+<h6>Videoaufnahmen </h6>
+</a>
+</div>
+</div>
+</li>
+<li class="thumbnail" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<div class="thumbnail-container"><div class="js-monstroid-thumbnail" data-tid="55712" data-brand="WordPress" data-categories="Business und Dienstleistungen" data-variant="premium" data-product_name="WordPress Vorlagen">
+<a href="https://www.templatemonster.com/de/demo/55712.html" class="thumb-wr js-view-product" data-tid="55712">
+<div class="wrap">
+<span class="img-wrapper">
+<img class="lazyOwl" data-src="https://s.tmimgcdn.com/scr/55700/wordpress-theme-namens-business-experte_55712-original.jpg?width=400&amp;height=400" alt="WordPress Theme namens &quot;Business-Experte&quot;" title="Business-Experte WPML Ready WordPress Theme Kleiner Screenshot" width="400" height="400">
+</span>
+</div>
+<h6>Business-Experte</h6>
+</a>
+</div>
+</div>
+</li>
+<li class="thumbnail" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<div class="thumbnail-container"><div class="js-monstroid-thumbnail" data-tid="55690" data-brand="WordPress" data-categories="Essen und Restaurant / Essen und Trinken Vorlagen" data-variant="premium" data-product_name="WordPress Vorlagen">
+<a href="https://www.templatemonster.com/de/demo/55690.html" class="thumb-wr js-view-product" data-tid="55690">
+<div class="wrap">
+<span class="img-wrapper">
+<img class="lazyOwl" data-src="https://s.tmimgcdn.com/scr/55600/wordpress-theme-namens-gusto_55690-original.jpg?width=400&amp;height=400" alt="WordPress Theme namens &quot;Gusto&quot;" title="Gusto Bootstrap WordPress Theme Kleiner Screenshot" width="400" height="400">
+</span>
+</div>
+<h6>Gusto</h6>
+</a>
+</div>
+</div>
+</li>
+<li class="thumbnail" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<div class="thumbnail-container"><div class="js-monstroid-thumbnail" data-tid="57738" data-brand="WordPress" data-categories="Sports, Außensport und Reisen / Sport Vorlagen / Angeln Vorlagen" data-variant="premium" data-product_name="WordPress Vorlagen">
+<a href="https://www.templatemonster.com/de/demo/57738.html" class="thumb-wr js-view-product" data-tid="57738">
+<div class="wrap">
+<span class="img-wrapper">
+<img class="lazyOwl" data-src="https://s.tmimgcdn.com/scr/57700/wordpress-theme-namens-angelclub_57738-original.jpg?width=400&amp;height=400" alt="WordPress Theme namens &quot;Angelclub&quot;" title="Angelclub Bootstrap WordPress Theme Kleiner Screenshot" width="400" height="400">
+</span>
+</div>
+<h6>Angelclub</h6>
+</a>
+</div>
+</div>
+</li>
+<li class="thumbnail" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<div class="thumbnail-container"><div class="js-monstroid-thumbnail" data-tid="57602" data-brand="WordPress" data-categories="Design und Fotografie  / Design / Architektur" data-variant="premium" data-product_name="WordPress Vorlagen">
+<a href="https://www.templatemonster.com/de/demo/57602.html" class="thumb-wr js-view-product" data-tid="57602">
+<div class="wrap">
+<span class="img-wrapper">
+<img class="lazyOwl" data-src="https://s.tmimgcdn.com/scr/57600/responsives-wordpress-theme-fur-architektur_57602-original.jpg?width=400&amp;height=400" alt="Responsives WordPress Theme für Architektur" title="Stock Photo Bootstrap WordPress Theme Kleiner Screenshot" width="400" height="400">
+</span>
+</div>
+<h6>Stock Photo</h6>
+</a>
+</div>
+</div>
+</li>
+<li class="thumbnail" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<div class="thumbnail-container"><div class="js-monstroid-thumbnail" data-tid="55603" data-brand="WordPress" data-categories="Business und Dienstleistungen / Industrie Vorlagen" data-variant="premium" data-product_name="WordPress Vorlagen">
+<a href="https://www.templatemonster.com/de/demo/55603.html" class="thumb-wr js-view-product" data-tid="55603">
+<div class="wrap">
+<span class="img-wrapper">
+<img class="lazyOwl" data-src="https://s.tmimgcdn.com/scr/55600/wordpress-theme-namens-textil_55603-original.jpg?width=400&amp;height=400" alt="WordPress Theme namens &quot;Textil&quot;" title="Textil WPML Ready WordPress Vorlage Kleiner Screenshot" width="400" height="400">
+</span>
+</div>
+<h6>Textil</h6>
+</a>
+</div>
+</div>
+</li>
+<li class="thumbnail" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<div class="thumbnail-container"><div class="js-monstroid-thumbnail" data-tid="55589" data-brand="WordPress" data-categories="Unterhaltung, Spiele und Nachtleben / Unterhaltung Vorlagen / Zirkus" data-variant="premium" data-product_name="WordPress Vorlagen">
+<a href="https://www.templatemonster.com/de/demo/55589.html" class="thumb-wr js-view-product" data-tid="55589">
+<div class="wrap">
+<span class="img-wrapper">
+<img class="lazyOwl" data-src="https://s.tmimgcdn.com/scr/55500/wordpress-theme-namens-zirkuszelt_55589-original.jpg?width=400&amp;height=400" alt="WordPress Theme namens &quot;Zirkuszelt&quot;" title="Zirkuszelt Parallax WordPress Vorlage Kleiner Screenshot" width="400" height="400">
+</span>
+</div>
+<h6>Zirkuszelt</h6>
+</a>
+</div>
+</div>
+</li>
+<li class="thumbnail" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<div class="thumbnail-container"><div class="js-monstroid-thumbnail" data-tid="55579" data-brand="WordPress" data-categories="Sports, Außensport und Reisen / Sport Vorlagen / Mehr Sport / Hockey Vorlagen" data-variant="premium" data-product_name="WordPress Vorlagen">
+<a href="https://www.templatemonster.com/de/demo/55579.html" class="thumb-wr js-view-product" data-tid="55579">
+<div class="wrap">
+<span class="img-wrapper">
+<img class="lazyOwl" data-src="https://s.tmimgcdn.com/scr/55500/wordpress-theme-namens-sportblog_55579-original.jpg?width=400&amp;height=400" alt="WordPress Theme namens &quot;Sportblog&quot;" title="Sportblog Parallax WordPress Vorlage Kleiner Screenshot" width="400" height="400">
+</span>
+</div>
+<h6>Sportblog</h6>
+</a>
+</div>
+</div>
+</li>
+<li class="thumbnail" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<div class="thumbnail-container"><div class="js-monstroid-thumbnail" data-tid="55563" data-brand="WordPress" data-categories="Unterhaltung, Spiele und Nachtleben / Unterhaltung Vorlagen" data-variant="premium" data-product_name="WordPress Vorlagen">
+<a href="https://www.templatemonster.com/de/demo/55563.html" class="thumb-wr js-view-product" data-tid="55563">
+<div class="wrap">
+<span class="img-wrapper">
+<img class="lazyOwl" data-src="https://s.tmimgcdn.com/scr/55500/wordpress-theme-namens-rodeostadion_55563-original.jpg?width=400&amp;height=400" alt="WordPress Theme namens &quot;Rodeostadion&quot;" title="Rodeostadion Responsive WordPress Vorlage Kleiner Screenshot" width="400" height="400">
+</span>
+</div>
+<h6>Rodeostadion</h6>
+</a>
+</div>
+</div>
+</li>
+<li class="thumbnail" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<div class="thumbnail-container"><div class="js-monstroid-thumbnail" data-tid="55486" data-brand="WordPress" data-categories="Essen und Restaurant / Vorlagen für Brauerei" data-variant="premium" data-product_name="WordPress Vorlagen">
+<a href="https://www.templatemonster.com/de/demo/55486.html" class="thumb-wr js-view-product" data-tid="55486">
+<div class="wrap">
+<span class="img-wrapper">
+<img class="lazyOwl" data-src="https://s.tmimgcdn.com/scr/55400/wordpress-theme-namens-brauerei_55486-original.jpg?width=400&amp;height=400" alt="WordPress Theme namens &quot;Brauerei&quot;" title="Brauerei Parallax WordPress Theme Kleiner Screenshot" width="400" height="400">
+</span>
+</div>
+<h6>Brauerei</h6>
+</a>
+</div>
+</div>
+</li>
+<li class="thumbnail" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<div class="thumbnail-container"><div class="js-monstroid-thumbnail" data-tid="55460" data-brand="WordPress" data-categories="Design und Fotografie  / Design / Innenausstattung und Möbel Vorlagen / Möbel Vorlagen" data-variant="premium" data-product_name="WordPress Vorlagen">
+<a href="https://www.templatemonster.com/de/demo/55460.html" class="thumb-wr js-view-product" data-tid="55460">
+<div class="wrap">
+<span class="img-wrapper">
+<img class="lazyOwl" data-src="https://s.tmimgcdn.com/scr/55400/wordpress-theme-namens-mobelfirma_55460-original.jpg?width=400&amp;height=400" alt="WordPress Theme namens &quot;Möbelfirma&quot;" title="Möbelfirma Bootstrap WordPress Theme Kleiner Screenshot" width="400" height="400">
+</span>
+</div>
+<h6>Möbelfirma</h6>
+</a>
+</div>
+</div>
+</li>
+<li class="thumbnail" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<div class="thumbnail-container"><div class="js-monstroid-thumbnail" data-tid="55425" data-brand="WordPress" data-categories="Design und Fotografie  / Design / Architektur / Baufirma " data-variant="premium" data-product_name="WordPress Vorlagen">
+<a href="https://www.templatemonster.com/de/demo/55425.html" class="thumb-wr js-view-product" data-tid="55425">
+<div class="wrap">
+<span class="img-wrapper">
+<img class="lazyOwl" data-src="https://s.tmimgcdn.com/scr/55400/responsives-wordpress-theme-fur-baufirma_55425-original.jpg?width=400&amp;height=400" alt="Responsives WordPress Theme für Baufirma " title="Stock Photo Responsive WordPress Vorlage Kleiner Screenshot" width="400" height="400">
+</span>
+</div>
+<h6>Stock Photo</h6>
+</a>
+</div>
+</div>
+</li>
+<li class="thumbnail" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<div class="thumbnail-container"><div class="js-monstroid-thumbnail" data-tid="55416" data-brand="WordPress" data-categories="Unterhaltung, Spiele und Nachtleben / Unterhaltung Vorlagen" data-variant="premium" data-product_name="WordPress Vorlagen">
+<a href="https://www.templatemonster.com/de/demo/55416.html" class="thumb-wr js-view-product" data-tid="55416">
+<div class="wrap">
+<span class="img-wrapper">
+<img class="lazyOwl" data-src="https://s.tmimgcdn.com/scr/55400/wordpress-theme-namens-cartoons-blog-_55416-original.jpg?width=400&amp;height=400" alt="WordPress Theme namens &quot;Cartoons-Blog &quot;" title="Cartoons-Blog  Responsive WordPress Theme Kleiner Screenshot" width="400" height="400">
+</span>
+</div>
+<h6>Cartoons-Blog </h6>
+</a>
+</div>
+</div>
+</li>
+<li class="thumbnail" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<div class="thumbnail-container"><div class="js-monstroid-thumbnail" data-tid="55376" data-brand="WordPress" data-categories="Essen und Restaurant / Cafe und Restaurant Vorlagen / Europäisches Restaurant Vorlagen" data-variant="premium" data-product_name="WordPress Vorlagen">
+<a href="https://www.templatemonster.com/de/demo/55376.html" class="thumb-wr js-view-product" data-tid="55376">
+<div class="wrap">
+<span class="img-wrapper">
+<img class="lazyOwl" data-src="https://s.tmimgcdn.com/scr/55300/wordpress-theme-namens-gourmetkuche_55376-original.jpg?width=400&amp;height=400" alt="WordPress Theme namens &quot;Gourmetküche&quot;" title="Gourmetküche Bootstrap WordPress Theme Kleiner Screenshot" width="400" height="400">
+</span>
+</div>
+<h6>Gourmetküche</h6>
+</a>
+</div>
+</div>
+</li>
+<li class="thumbnail" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<div class="thumbnail-container"><div class="js-monstroid-thumbnail" data-tid="55354" data-brand="WordPress" data-categories="Business und Dienstleistungen / Landwirtschaft Vorlagen / Farm Vorlagen" data-variant="premium" data-product_name="WordPress Vorlagen">
+<a href="https://www.templatemonster.com/de/demo/55354.html" class="thumb-wr js-view-product" data-tid="55354">
+<div class="wrap">
+<span class="img-wrapper">
+<img class="lazyOwl" data-src="https://s.tmimgcdn.com/scr/55300/wordpress-theme-namens-vorort-bei-sonnenuntergang_55354-original.jpg?width=400&amp;height=400" alt="WordPress Theme namens &quot;Vorort bei Sonnenuntergang&quot;" title="Vorort bei Sonnenuntergang Parallax WordPress Theme Kleiner Screenshot" width="400" height="400">
+</span>
+</div>
+<h6>Vorort bei Sonnenuntergang</h6>
+</a>
+</div>
+</div>
+</li>
+<li class="thumbnail" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<div class="thumbnail-container"><div class="js-monstroid-thumbnail" data-tid="55279" data-brand="WordPress" data-categories="Business und Dienstleistungen / Wartungsservice Vorlagen / Schwimmbad Vorlagen" data-variant="premium" data-product_name="WordPress Vorlagen">
+<a href="https://www.templatemonster.com/de/demo/55279.html" class="thumb-wr js-view-product" data-tid="55279">
+<div class="wrap">
+<span class="img-wrapper">
+<img class="lazyOwl" data-src="https://s.tmimgcdn.com/scr/55200/wordpress-theme-namens-poolreinigung_55279-original.jpg?width=400&amp;height=400" alt="WordPress Theme namens &quot;Poolreinigung&quot;" title="Poolreinigung Parallax WordPress Vorlage Kleiner Screenshot" width="400" height="400">
+</span>
+</div>
+<h6>Poolreinigung</h6>
+</a>
+</div>
+</div>
+</li>
+<li class="thumbnail" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<div class="thumbnail-container"><div class="js-monstroid-thumbnail" data-tid="55229" data-brand="WordPress" data-categories="Medizin Vorlagen / Arzt" data-variant="premium" data-product_name="WordPress Vorlagen">
+<a href="https://www.templatemonster.com/de/demo/55229.html" class="thumb-wr js-view-product" data-tid="55229">
+<div class="wrap">
+<span class="img-wrapper">
+<img class="lazyOwl" data-src="https://s.tmimgcdn.com/scr/55200/wordpress-theme-namens-sozialhilfe-fur-senioren_55229-original.jpg?width=400&amp;height=400" alt="WordPress Theme namens &quot;Sozialhilfe für Senioren&quot;" title="Sozialhilfe für Senioren Bootstrap WordPress Vorlage Kleiner Screenshot" width="400" height="400">
+</span>
+</div>
+<h6>Sozialhilfe für Senioren</h6>
+</a>
+</div>
+</div>
+</li>
+<li class="thumbnail" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<div class="thumbnail-container"><div class="js-monstroid-thumbnail" data-tid="55187" data-brand="WordPress" data-categories="Essen und Restaurant / Cafe und Restaurant Vorlagen / Europäisches Restaurant Vorlagen / Italienisches Restaurant Vorlagen" data-variant="premium" data-product_name="WordPress Vorlagen">
+<a href="https://www.templatemonster.com/de/demo/55187.html" class="thumb-wr js-view-product" data-tid="55187">
+<div class="wrap">
+<span class="img-wrapper">
+<img class="lazyOwl" data-src="https://s.tmimgcdn.com/scr/55100/wordpress-theme-namens-pasta-und-ravioli-macher_55187-original.jpg?width=400&amp;height=400" alt="WordPress Theme namens &quot;Pasta und Ravioli-Macher&quot;" title="Pasta und Ravioli-Macher Bootstrap WordPress Vorlage Kleiner Screenshot" width="400" height="400">
+</span>
+</div>
+<h6>Pasta und Ravioli-Macher</h6>
+</a>
+</div>
+</div>
+</li>
+<li class="thumbnail" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<div class="thumbnail-container"><div class="js-monstroid-thumbnail" data-tid="55142" data-brand="WordPress" data-categories="Medizin Vorlagen / Hypnose" data-variant="premium" data-product_name="WordPress Vorlagen">
+<a href="https://www.templatemonster.com/de/demo/55142.html" class="thumb-wr js-view-product" data-tid="55142">
+<div class="wrap">
+<span class="img-wrapper">
+<img class="lazyOwl" data-src="https://s.tmimgcdn.com/scr/55100/wordpress-theme-namens-hypnose_55142-original.jpg?width=400&amp;height=400" alt="WordPress Theme namens &quot;Hypnose&quot;" title="Hypnose Bootstrap WordPress Theme Kleiner Screenshot" width="400" height="400">
+</span>
+</div>
+<h6>Hypnose</h6>
+</a>
+</div>
+</div>
+</li>
+<li class="thumbnail" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<div class="thumbnail-container"><div class="js-monstroid-thumbnail" data-tid="55048" data-brand="WordPress" data-categories="Business und Dienstleistungen" data-variant="premium" data-product_name="WordPress Vorlagen">
+<a href="https://www.templatemonster.com/de/demo/55048.html" class="thumb-wr js-view-product" data-tid="55048">
+<div class="wrap">
+<span class="img-wrapper">
+<img class="lazyOwl" data-src="https://s.tmimgcdn.com/scr/55000/wordpress-theme-namens-himmelhoch_55048-original.jpg?width=400&amp;height=400" alt="WordPress Theme namens &quot;Himmelhoch&quot;" title="Himmelhoch Parallax WordPress Theme Kleiner Screenshot" width="400" height="400">
+</span>
+</div>
+<h6>Himmelhoch</h6>
+</a>
+</div>
+</div>
+</li>
+<li class="thumbnail" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<div class="thumbnail-container"><div class="js-monstroid-thumbnail" data-tid="55032" data-brand="WordPress" data-categories="Design und Fotografie  / Design / Web Design Vorlagen" data-variant="premium" data-product_name="WordPress Vorlagen">
+<a href="https://www.templatemonster.com/de/demo/55032.html" class="thumb-wr js-view-product" data-tid="55032">
+<div class="wrap">
+<span class="img-wrapper">
+<img class="lazyOwl" data-src="https://s.tmimgcdn.com/scr/55000/wordpress-theme-namens-pixelart_55032-original.jpg?width=400&amp;height=400" alt="WordPress Theme namens &quot;PixelArt&quot;" title="PixelArt Responsive WordPress Theme Kleiner Screenshot" width="400" height="400">
+</span>
+</div>
+<h6>PixelArt</h6>
+</a>
+</div>
+</div>
+</li>
+<li class="thumbnail" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<div class="thumbnail-container"><div class="js-monstroid-thumbnail" data-tid="55049" data-brand="WordPress" data-categories="Autos und Motorräder  / Wagen Vorlagen / Limousinenservice Vorlagen" data-variant="premium" data-product_name="WordPress Vorlagen">
+<a href="https://www.templatemonster.com/de/demo/55049.html" class="thumb-wr js-view-product" data-tid="55049">
+<div class="wrap">
+<span class="img-wrapper">
+<img class="lazyOwl" data-src="https://s.tmimgcdn.com/scr/55000/wordpress-theme-namens-limousine_55049-original.jpg?width=400&amp;height=400" alt="WordPress Theme namens &quot;Limousine&quot;" title="Limousine Bootstrap WordPress Vorlage Kleiner Screenshot" width="400" height="400">
+</span>
+</div>
+<h6>Limousine</h6>
+</a>
+</div>
+</div>
+</li>
+<li class="thumbnail" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<div class="thumbnail-container"><div class="js-monstroid-thumbnail" data-tid="55047" data-brand="WordPress" data-categories="Business und Dienstleistungen / Business Services / Public Relations Vorlagen" data-variant="premium" data-product_name="WordPress Vorlagen">
+<a href="https://www.templatemonster.com/de/demo/55047.html" class="thumb-wr js-view-product" data-tid="55047">
+<div class="wrap">
+<span class="img-wrapper">
+<img class="lazyOwl" data-src="https://s.tmimgcdn.com/scr/55000/wordpress-theme-namens-hr-rekrutierung_55047-original.jpg?width=400&amp;height=400" alt="WordPress Theme namens &quot;HR Rekrutierung&quot;" title="HR Rekrutierung Bootstrap WordPress Vorlage Kleiner Screenshot" width="400" height="400">
+</span>
+</div>
+<h6>HR Rekrutierung</h6>
+</a>
+</div>
+</div>
+</li>
+<li class="thumbnail" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<div class="thumbnail-container"><div class="js-monstroid-thumbnail" data-tid="55026" data-brand="WordPress" data-categories="Ausbildung und Bücher  / Ausbildung Vorlagen" data-variant="premium" data-product_name="WordPress Vorlagen">
+<a href="https://www.templatemonster.com/de/demo/55026.html" class="thumb-wr js-view-product" data-tid="55026">
+<div class="wrap">
+<span class="img-wrapper">
+<img class="lazyOwl" data-src="https://s.tmimgcdn.com/scr/55000/wordpress-theme-namens-schulbezirk_55026-original.jpg?width=400&amp;height=400" alt="WordPress Theme namens &quot;Schulbezirk&quot;" title="Schulbezirk Responsive WordPress Theme Kleiner Screenshot" width="400" height="400">
+</span>
+</div>
+<h6>Schulbezirk</h6>
+</a>
+</div>
+</div>
+</li>
+<li class="thumbnail" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<div class="thumbnail-container"><div class="js-monstroid-thumbnail" data-tid="54993" data-brand="WordPress" data-categories="Sports, Außensport und Reisen / Sport Vorlagen / Mehr Sport / Cheerleading Vorlagen" data-variant="premium" data-product_name="WordPress Vorlagen">
+<a href="https://www.templatemonster.com/de/demo/54993.html" class="thumb-wr js-view-product" data-tid="54993">
+<div class="wrap">
+<span class="img-wrapper">
+<img class="lazyOwl" data-src="https://s.tmimgcdn.com/scr/54900/responsives-wordpress-theme-fur-cheerleading_54993-original.jpg?width=400&amp;height=400" alt="Responsives WordPress Theme für Cheerleading " title="Travel Responsive WordPress Vorlage Kleiner Screenshot" width="400" height="400">
+</span>
+</div>
+<h6>Travel</h6>
+</a>
+</div>
+</div>
+</li>
+<li class="thumbnail" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<div class="thumbnail-container"><div class="js-monstroid-thumbnail" data-tid="54784" data-brand="WordPress" data-categories="Design und Fotografie  / Design / Innenausstattung und Möbel Vorlagen / Bodenbelag Vorlage" data-variant="premium" data-product_name="WordPress Vorlagen">
+<a href="https://www.templatemonster.com/de/demo/54784.html" class="thumb-wr js-view-product" data-tid="54784">
+<div class="wrap">
+<span class="img-wrapper">
+<img class="lazyOwl" data-src="https://s.tmimgcdn.com/scr/54700/wordpress-theme-namens-stone_54784-original.jpg?width=400&amp;height=400" alt="WordPress Theme namens &quot;Stone&quot;" title="Stone Parallax WordPress Theme Kleiner Screenshot" width="400" height="400">
+</span>
+</div>
+<h6>Stone</h6>
+</a>
+</div>
+</div>
+</li>
+<li class="thumbnail" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<div class="thumbnail-container"><div class="js-monstroid-thumbnail" data-tid="54794" data-brand="WordPress" data-categories="Business und Dienstleistungen" data-variant="premium" data-product_name="WordPress Vorlagen">
+<a href="https://www.templatemonster.com/de/demo/54794.html" class="thumb-wr js-view-product" data-tid="54794">
+<div class="wrap">
+<span class="img-wrapper">
+<img class="lazyOwl" data-src="https://s.tmimgcdn.com/scr/54700/responsives-wordpress-theme-fur-business-und-dienstleistungen_54794-original.jpg?width=400&amp;height=400" alt="Responsives WordPress Theme für Business und Dienstleistungen" title="Accounting Website Bootstrap WordPress Theme Kleiner Screenshot" width="400" height="400">
+</span>
+</div>
+<h6>Accounting Website</h6>
+</a>
+</div>
+</div>
+</li>
+<li class="thumbnail" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<div class="thumbnail-container"><div class="js-monstroid-thumbnail" data-tid="54799" data-brand="WordPress" data-categories="Ausbildung und Bücher  / Ausbildung Vorlagen / Colleges und Universitäten / Universität Vorlagen" data-variant="premium" data-product_name="WordPress Vorlagen">
+<a href="https://www.templatemonster.com/de/demo/54799.html" class="thumb-wr js-view-product" data-tid="54799">
+<div class="wrap">
+<span class="img-wrapper">
+<img class="lazyOwl" data-src="https://s.tmimgcdn.com/scr/54700/responsives-wordpress-theme-fur-universitat_54799-original.jpg?width=400&amp;height=400" alt="Responsives WordPress Theme für Universität " title="UFO Parallax WordPress Vorlage Kleiner Screenshot" width="400" height="400">
+</span>
+</div>
+<h6>UFO</h6>
+</a>
+</div>
+</div>
+</li>
+<li class="thumbnail" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<div class="thumbnail-container"><div class="js-monstroid-thumbnail" data-tid="54800" data-brand="WordPress" data-categories="Design und Fotografie  / Fotografie Vorlagen / Fotografen Portfolio Vorlagen" data-variant="premium" data-product_name="WordPress Vorlagen">
+<a href="https://www.templatemonster.com/de/demo/54800.html" class="thumb-wr js-view-product" data-tid="54800">
+<div class="wrap">
+<span class="img-wrapper">
+<img class="lazyOwl" data-src="https://s.tmimgcdn.com/scr/54800/responsives-wordpress-theme-fur-fotografen-portfolio_54800-original.jpg?width=400&amp;height=400" alt="Responsives WordPress Theme für Fotografen Portfolio " title="Photographer Portfolio Bootstrap WordPress Theme Kleiner Screenshot" width="400" height="400">
+</span>
+</div>
+<h6>Photographer Portfolio</h6>
+</a>
+</div>
+</div>
+</li>
+<li class="thumbnail" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<div class="thumbnail-container"><div class="js-monstroid-thumbnail" data-tid="54801" data-brand="WordPress" data-categories="Business und Dienstleistungen" data-variant="premium" data-product_name="WordPress Vorlagen">
+<a href="https://www.templatemonster.com/de/demo/54801.html" class="thumb-wr js-view-product" data-tid="54801">
+<div class="wrap">
+<span class="img-wrapper">
+<img class="lazyOwl" data-src="https://s.tmimgcdn.com/scr/54800/wordpress-theme-namens-sunrise_54801-original.jpg?width=400&amp;height=400" alt="WordPress Theme namens &quot;Sunrise&quot;" title="Sunrise Responsive WordPress Vorlage Kleiner Screenshot" width="400" height="400">
+</span>
+</div>
+<h6>Sunrise</h6>
+</a>
+</div>
+</div>
+</li>
+<li class="thumbnail" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<div class="thumbnail-container"><div class="js-monstroid-thumbnail" data-tid="55555" data-brand="WordPress" data-categories="" data-variant="premium" data-product_name="WordPress Vorlagen">
+<a href="https://www.templatemonster.com/de/demo/55555.html" class="thumb-wr js-view-product" data-tid="55555">
+<div class="wrap">
+<span class="img-wrapper">
+<img class="lazyOwl" data-src="https://s.tmimgcdn.com/scr/55500/wordpress-theme-namens-monstroid_55555-original.jpg?width=400&amp;height=400" alt="WordPress Theme namens &quot;Monstroid&quot;" title="Monstroid Parallax WordPress Vorlage Kleiner Screenshot" width="400" height="400">
+</span>
+</div>
+<h6>Monstroid</h6>
+</a>
+</div>
+</div>
+</li>
+<li class="thumbnail" itemprop="itemListElement" itemscope itemtype="http://schema.org/Product">
+<div class="thumbnail-container"><div class="js-monstroid-thumbnail" data-tid="54984" data-brand="WordPress" data-categories="" data-variant="premium" data-product_name="WordPress Vorlagen">
+<a href="https://www.templatemonster.com/de/demo/54984.html" class="thumb-wr js-view-product" data-tid="54984">
+<div class="wrap">
+<span class="img-wrapper">
+<img class="lazyOwl" data-src="https://s.tmimgcdn.com/scr/54900/wordpress-theme_54984-original.jpg?width=400&amp;height=400" alt="WordPress Theme" title="WordPress Theme  WordPress Theme Kleiner Screenshot" width="400" height="400">
+</span>
+</div>
+<h6>Item</h6>
+</a>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="name_template">
+<div class="link-1 js-popup-open" data-popupi="js-popupi-1">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<div id="popover2" class="js-popup-content js-popupi-1">
+<a href="https://www.templatemonster.com/de/wordpress-themen-tipo-55555.html">Template Details</a>
+<a href="https://ld-wp.template-help.com/wordpress_55555/">Vorschau ohne Frame</a>
+</div>
+</div>
+<div class="responsive-block">
+<ul id="responsivator">
+<li class="response active" id="desktop"></li>
+<li class="response" id="tablet-portrait"></li>
+<li class="response" id="tablet-landscape"></li>
+<li class="response" id="iphone-portrait"></li>
+<li class="response" id="iphone-landscape"></li>
+<li id="qr" class="qr">
+<div id="qr-open" class="js-popup-open" data-popupi="js-popupi-2"><span></span></div>
+<div id="qr-content" class="clearfix js-popup-content js-popupi-2" style="display:none">
+<div class="img-wrapper">
+<div class="tm-icon icon-cross icon-close"></div>
+<img src="https://chart.googleapis.com/chart?cht=qr&amp;chs=180&amp;chl=https%3A%2F%2Fld-wp.template-help.com%2Fwordpress_55555%2F%3Futm_source%3Ddirect%26utm_medium%3Ddemo%26utm_campaign%3Dqr-code&amp;choe=UTF-8&amp;chld=M|0" alt=""/>
+</div>
+<div id="qr-text">Preview on mobile device</div>
+<div class="clear"></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="topbar_info clearfix">
+<div class="btn-group buy_now">
+<span class="  button btn-important tm-icon
+                            icon-cart js-demo-buy-button js-btn" data-href="https://www.templatemonster.com/de/wahrenkorb/?add=55555&amp;price_variant=regular" data-variant='regular' data-price='68' data-full_price='68'>Jetzt Kaufen</span>
+<span class=" js-none button btn-important tm-icon
+                            icon-cart js-demo-buy-button js-btn" data-href="https://www.templatemonster.com/de/wahrenkorb/?add=55555&amp;price_variant=exclusive" data-variant='exclusive' data-price='3863' data-full_price='3863'>Jetzt Kaufen</span>
+<span class="button btn-important tm-icon icon-cart already-get js-none js-btn" data-href="https://www.templatemonster.com/de/wahrenkorb/">
+Warenkorb
+</span>
+</div>
+<span class="price-item-title js-cart-item-info js-none">Artikel 55555 In den Warenkorb.</span>
+<div class="price-wrapper regular js-offer-trigger js-popup-open dropdown-arrow" data-popupi="js-popupi-3">
+<span class="price-title">Einmalige Nutzungslizenz </span>
+<span class="price js-price hide-price" data-discount="68" data-price="68">68 €</span>
+</div>
+<div class="clear" style="clear: both;"></div>
+</div>
+<div class="box-drop js-popup-content js-popupi-3" id="dropdown">
+<ul class="list-drop">
+<li class="js-demo-list-li" data-variant='regular'>
+<span class="js-drop" data-href="https://www.templatemonster.com/de/wahrenkorb/?add=55555&amp;price_variant=regular"><span class="recommended-wrap">Einmalige Nutzungslizenz <span class="recommended"></span> </span> <span class="price js-price hide-price" data-discount="68" data-price="68"> 68 €</span></span>
+</li>
+<li class="js-demo-list-li" data-variant='exclusive'>
+<span class="js-drop" data-href="https://www.templatemonster.com/de/wahrenkorb/?add=55555&amp;price_variant=exclusive"><span class="recommended-wrap">Buyout Kauflizenz</span> <span class="price js-price hide-price" data-discount="3863" data-price="3863"> 3.863 €</span></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+ 
+<span class="trigger icon-arrow-small-up"></span>
+ 
+</div>
+<div id="iframelive" class="">
+<div id="frameWrapper">
+<iframe id="frame" src='' data-src="https://ld-wp.template-help.com/wordpress_55555/">
+[Ihr User-Agent unterstützt keine Frames oder ist zurzeit so konfiguriert, dass Frames nicht angezeigt werden. Sie können jedoch das zugehörige Dokument öffnen.]
+</iframe>
+</div>
+</div>
+<div class="js-revive-banner-container">
+<ins data-revive-zoneid="18" data-revive-id="5dba4d01a92de7101be5c5e6e1630dfe"></ins>
+</div>
+<script>
+	//this function will work cross-browser for loading scripts asynchronously
+	function loadScript(src, isasync, callback) {
+		var s,
+			r,
+			t;
+		r = false;
+		s = document.createElement('script');
+		s.type = 'text/javascript';
+		s.src = src;
+		s.async = isasync;
+		s.onload = s.onreadystatechange = function () {
+//console.log( this.readyState ); //uncomment this line to see which ready states are called.
+			if (!r && (!this.readyState || this.readyState == 'complete')) {
+				r = true;
+				if ("undefined" != typeof callback) {
+					callback();
+				}
+			}
+		};
+		t = document.getElementsByTagName('script')[0];
+		t.parentNode.insertBefore(s, t);
+	}
+	window.isJsLoaded = false;
+
+	function loadIncJs() {
+		loadScript("https://s.tmimgcdn.com/js/tm/frontend/indclude-js.min.js?d=e81c948722", false, loadAllJS);
+	}
+
+	function toLoadJsList(src) {
+		if (typeof window.jsList !== "undefined") {
+			window.jsList.push(src);
+		} else {
+			window.jsList = [src]
+		}
+	}
+
+	function loadAllJS() {
+		var dependencyLibs = [
+						"https://s.tmimgcdn.com/js/varnish.compiled.application.de.js?d=e81c948722",
+					];
+		if (window.jsList) {
+			dependencyLibs = dependencyLibs.concat(window.jsList);
+		}
+		var indcludeJsLoader = new Tm.IndcludeJs(dependencyLibs, false);
+		indcludeJsLoader.add(function (state) {
+			$(document).trigger("TM_JS_LOADED");
+//			$(document).trigger("ready");
+			$(window).trigger("load");
+            var event;
+			var eventName = 'TM_JS_LOADED_NATIVE';
+			if (typeof(CustomEvent) === 'function') {
+				event = new CustomEvent(eventName);
+			} else {
+				event = document.createEvent('CustomEvent');
+				event.initEvent(eventName, true, true);
+			}
+            document.dispatchEvent(event);
+		});
+	}
+	window.onload = function () {
+		if (!window.isJsLoaded) {
+			window.isJsLoaded = true;
+			loadCSS("https://s.tmimgcdn.com/css/svg-icons.css?d=1699766da5");
+			loadScript("https://www.templatemonster.com/js/config.js", true, loadIncJs);
+		}
+	}
+</script>
+ 
+<script type='text/javascript' src='https://r.templatemonster.com/dl/1asyncjs.php' async></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"72d7dcce33","applicationID":"15895132,11369496","transactionName":"ZV1TZ0FTVkFVWkwKXlwXckZARldfG3BWB1RKe15dR0BXXlhcSlkLVl1cXA==","queueTime":0,"applicationTime":7287,"atts":"SRpEEQlJRR4WWBpZSk9F","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
